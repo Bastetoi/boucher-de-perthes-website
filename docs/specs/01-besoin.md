@@ -22,4 +22,6 @@ Français, mobile d'abord, rapide, accessible (RGAA/WCAG AA visé), pas de cooki
 ## Reçu / à fournir
 Reçu : nom, logo (150×150 JPG, voir specs/04), photo de référence, plateforme de billetterie (AssoConnect), volume photos (< 2 Go).
 Réseaux : Instagram <https://www.instagram.com/lesboucherdeperthes/>, Facebook <https://www.facebook.com/share/19eVfzg3bK/>.
-À fournir : logo vectoriel d'origine (un retraçage SVG existe dans `brand/`), adresse mail de contact, texte de présentation, liste des spectacles (passés / à venir), les photos.
+Contact : lesboucherdeperthes@gmail.com.
+Logo : recréé en SVG dans `brand/` (l'original est perdu).
+À fournir : texte de présentation, liste des spectacles (passés / à venir), les photos.

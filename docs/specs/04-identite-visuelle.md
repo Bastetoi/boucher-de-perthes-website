@@ -20,6 +20,6 @@ Base : `brand/hero-reference.jpg` (photo) et `brand/logo-150px.jpg` (logo).
 - **Graphisme** : un seul motif, le trait continu du logo, en filigrane ou séparateur. Pas d'ornements en plus.
 
 ## Points d'attention
-- Le logo fourni fait **150×150 px en JPG** ; `brand/logo*.svg` est un **retraçage automatique** de cette image : les visages (trait continu) sont fidèles, mais l'écriture manuscrite est approximative (lettres un peu épaissies). Si le fichier vectoriel d'origine est retrouvé, il remplace ces fichiers.
+- Le logo fourni fait **150×150 px en JPG** ; `brand/logo*.svg` est une **recréation** : les deux visages au trait continu sont retracés depuis l'image, et le texte « Les Boucher de Perthes » est recomposé avec la police Caveat Brush (licence OFL, glyphes convertis en tracés, aucune police à charger) sur deux arcs comme à l'origine. Le « B » majuscule de *Boucher* vient du logo d'origine. L'original n'existe plus : ces fichiers font référence.
 - Contraste : le bordeaux `#800020` sur fond noir est trop faible pour du texte (1,8:1). Il sert au décor (aplats, bandeaux, dégradés) ; texte, liens et boutons utilisent le blanc cassé ou le rouge éclairci `#e0405a`.
 - Photo : l'image est très sombre ; prévoir un dégradé et un poids optimisé (AVIF/WebP) pour un bon chargement sur mobile.
