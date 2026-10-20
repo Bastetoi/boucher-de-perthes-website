@@ -1,4 +1,6 @@
-# Site de la troupe de théâtre
+# Les boucher de Perthes — site web
+
+> Nom de la troupe : « Les boucher de Perthes » (sans « s » à *boucher*, volontairement).
 
 Site vitrine : billetterie (liens externes) + relais des publications Facebook / Instagram.
 Hébergé sur Raspberry Pi (Docker Compose), exposé sur Internet à terme.

@@ -10,12 +10,13 @@ Site hébergé sur la Pi, exposé sur Internet « à terme ». Une Pi derrière 
 3. **Tailscale Funnel** : très simple, mais domaine personnalisé limité.
 
 ## Décision proposée
-Docker Compose avec : un conteneur web (Caddy servant le site statique) + `cloudflared` au moment de l'exposition. En local/LAN d'abord, sans tunnel.
+Raspberry Pi 5 (arm64) sous Docker Compose : un conteneur web (Caddy servant le site statique) + `cloudflared`. Le domaine sera acheté chez Cloudflare (déjà utilisé pour un autre projet), ce qui rend l'option 2 (Tunnel) naturelle : DNS, certificat et tunnel au même endroit. En LAN d'abord, sans tunnel, puis exposition.
 
 ## Conséquences
 - Le site statique résiste bien à une Pi et à un pic de trafic (cache Cloudflare).
-- Il faut un nom de domaine (à acheter) avant l'exposition.
+- Domaine à acheter chez Cloudflare avant l'exposition (nom à choisir, cf. specs/01).
+- Images Docker en `linux/arm64` (Pi 5).
 - Sauvegardes : le contenu est dans git, rien d'autre à sauvegarder tant qu'il n'y a pas de backend.
 
 ## Questions ouvertes
-- Nom de domaine souhaité ? Modèle de Pi (arm64 ?) ?
+- Quel nom de domaine ? (voir propositions dans specs/01.) Réutiliser le compte/tunnel Cloudflare de l'autre projet ou en créer un dédié ?

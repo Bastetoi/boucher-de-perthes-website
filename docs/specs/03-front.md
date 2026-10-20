@@ -9,7 +9,7 @@
 - `/mentions-legales`.
 
 ## Principes
-Mise en page sobre, photo plein cadre, typographie lisible, contraste AA, images responsives `loading=lazy`, navigation clavier, `<html lang="fr">`, SEO (balises OG, JSON-LD `TheaterEvent`) pour apparaître dans Google Événements.
+Ambiance scène : fond sombre, photos plein cadre, lumière chaude (voir specs/04). Mise en page sobre, typographie lisible, contraste AA, images responsives `loading=lazy`, navigation clavier, `<html lang="fr">`, SEO (balises OG, JSON-LD `TheaterEvent`) pour apparaître dans Google Événements.
 
 ## À définir avec la troupe
 Charte (couleurs/logo), ton éditorial, 2–3 sites de référence qui plaisent.
