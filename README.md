@@ -15,3 +15,14 @@ Phase actuelle : **conception** (aucun code). Voir [`docs/`](docs/README.md).
 
 - Commits : [Conventional Commits](https://www.conventionalcommits.org/fr/)
 - Releases : [release-please](https://github.com/googleapis/release-please) (mis en place en phase code)
+
+## Développer
+
+```sh
+cd web
+npm ci
+npm run dev      # http://localhost:4321
+npm run build    # vérification des types + build statique dans web/dist
+```
+
+Workflow : branche → PR (titre en Conventional Commits, squash merge) → release-please ouvre la PR de release.

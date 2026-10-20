@@ -1,0 +1,20 @@
+{
+  "name": "boucher-de-perthes-web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.11",
+    "astro": "^7.4.1",
+    "typescript": "^6.0.3"
+  }
+}
