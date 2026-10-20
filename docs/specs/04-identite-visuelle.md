@@ -8,13 +8,18 @@ Base : `brand/hero-reference.jpg` (photo) et `brand/logo-150px.jpg` (logo).
 
 ## Direction proposée
 - **Thème sombre** par défaut : fond quasi noir, texte clair.
-- **Palette** (à valider à l'œil, valeurs approchées) : noir `#0b0908`, bordeaux du logo `#8a1c2b`, ambre de la lumière `#e8a15a`, argent `#c9c9cc`, blanc cassé `#f4efe8`.
+- **Palette « rouge et noir »** (base Coolors fournie : https://coolors.co/800020-6b001b-550015-400010-2b000b-150005-000000) :
+  - bordeaux `#800020` (couleur du logo), puis ses nuances sombres `#6b001b` `#550015` `#400010` `#2b000b` `#150005`, noir `#000000` ;
+  - fond de page : noir `#0b0908` à `#150005` ;
+  - texte : blanc cassé `#f4efe8` (contraste 17:1) ;
+  - accent lisible (liens, boutons, survol) : rouge éclairci `#e0405a` (contraste 4,8:1 sur fond sombre, conforme AA).
+  - Les paillettes argent / ambre de la photo restent un clin d'œil éventuel, pas une couleur de l'interface.
 - **Hero** d'accueil : la photo plein écran, titre et bouton « Réserver » dans l'espace noir à gauche (le cadrage s'y prête, aussi bien en paysage qu'en mobile avec recadrage `object-position` sur la silhouette).
 - **Typographie** : titres en serif élégant à contraste marqué (ex. Playfair Display / Cormorant), texte en sans-serif sobre (ex. Inter). Polices auto-hébergées (pas de Google Fonts, cf. RGPD).
-- **Logo** : à utiliser en bordeaux clair ou en blanc sur fond sombre ; trait fin = petite taille limitée.
+- **Logo** : `brand/logo.svg` (bordeaux, pour fond clair) et `brand/logo-light.svg` (blanc cassé, pour fond sombre, version à utiliser sur le site). Trait fin : taille minimale ~80 px de haut.
 - **Graphisme** : un seul motif, le trait continu du logo, en filigrane ou séparateur. Pas d'ornements en plus.
 
 ## Points d'attention
-- Le logo fourni fait **150×150 px en JPG sur fond blanc** : insuffisant pour l'écran haute densité et la favicon. Il faut le vectoriel d'origine, sinon on le re-vectorise (retracé) en SVG, ce qui est faisable vu la simplicité du trait.
-- Contraste : le bordeaux `#8a1c2b` sur fond noir est trop faible pour du texte (rapport < 3:1). Il sert au décor ; les liens et boutons utilisent l'ambre ou le blanc cassé.
+- Le logo fourni fait **150×150 px en JPG** ; `brand/logo*.svg` est un **retraçage automatique** de cette image : les visages (trait continu) sont fidèles, mais l'écriture manuscrite est approximative (lettres un peu épaissies). Si le fichier vectoriel d'origine est retrouvé, il remplace ces fichiers.
+- Contraste : le bordeaux `#800020` sur fond noir est trop faible pour du texte (1,8:1). Il sert au décor (aplats, bandeaux, dégradés) ; texte, liens et boutons utilisent le blanc cassé ou le rouge éclairci `#e0405a`.
 - Photo : l'image est très sombre ; prévoir un dégradé et un poids optimisé (AVIF/WebP) pour un bon chargement sur mobile.

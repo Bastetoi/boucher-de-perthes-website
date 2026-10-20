@@ -1,5 +1,5 @@
 # 0003 – Front statique avec Astro
-Statut : proposed
+Statut : accepted
 
 ## Contexte
 Besoin : quelques pages, très orientées photos, contenu qui change à chaque saison. Simple, rapide, léger pour la Pi.

@@ -1,5 +1,5 @@
 # 0005 – Conventional Commits + release-please
-Statut : proposed
+Statut : accepted
 
 ## Décision proposée
 - Commits en Conventional Commits (`feat:`, `fix:`, `docs:`, `chore:`…), vérifiés par commitlint en CI.

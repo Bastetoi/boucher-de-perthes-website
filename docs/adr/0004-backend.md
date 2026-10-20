@@ -1,5 +1,5 @@
 # 0004 – Backend FastAPI différé
-Statut : proposed
+Statut : accepted
 
 ## Contexte
 Le besoin initial (liens de billetterie, relais d'articles) ne nécessite pas de backend. Préférence : Python / FastAPI le moment venu.

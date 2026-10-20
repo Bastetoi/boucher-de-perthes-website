@@ -1,5 +1,5 @@
 # 0006 – Banque de photos
-Statut : proposed
+Statut : accepted
 
 ## Contexte
 Les photos sont l'élément visuel principal. Originaux potentiellement lourds (plusieurs Mo chacun) ; un repo git gonfle vite.

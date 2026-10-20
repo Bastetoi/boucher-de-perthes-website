@@ -1,5 +1,5 @@
 # 0007 – Relais des publications Facebook / Instagram
-Statut : proposed
+Statut : accepted
 
 ## Contexte
 Relayer les articles de communication. Les API Meta exigent une app, une validation et des tokens à renouveler : lourd pour une petite troupe.
@@ -14,3 +14,6 @@ v1 : option 1 (carte « Actualités » avec visuel + lien vers le post). Option 
 
 ## Conséquences
 Pas de cookies tiers, donc pas de bandeau de consentement requis pour cette partie.
+
+## Comptes
+Instagram : @lesboucherdeperthes. Facebook : page de la troupe (lien dans specs/01).

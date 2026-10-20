@@ -1,5 +1,5 @@
 # 0002 – Hébergement : Raspberry Pi + Docker Compose
-Statut : proposed
+Statut : accepted
 
 ## Contexte
 Site hébergé sur la Pi, exposé sur Internet « à terme ». Une Pi derrière une box domestique implique : IP dynamique, ports fermés, exposition du réseau local à éviter.

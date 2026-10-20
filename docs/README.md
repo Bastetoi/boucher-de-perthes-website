@@ -13,12 +13,12 @@ Le code ne démarre que lorsque les ADR ci-dessous sont passés en `accepted`.
 | # | Décision | Statut |
 |---|----------|--------|
 | [0001](adr/0001-adr-format.md) | Format des décisions | accepted |
-| [0002](adr/0002-hebergement.md) | Hébergement Pi + Docker Compose | proposed |
-| [0003](adr/0003-front.md) | Front statique (Astro) | proposed |
-| [0004](adr/0004-backend.md) | Backend FastAPI différé | proposed |
-| [0005](adr/0005-release.md) | Conventional Commits + release-please | proposed |
-| [0006](adr/0006-photos.md) | Banque de photos | proposed |
-| [0007](adr/0007-reseaux-sociaux.md) | Relais Facebook / Instagram | proposed |
+| [0002](adr/0002-hebergement.md) | Hébergement Pi + Docker Compose | accepted |
+| [0003](adr/0003-front.md) | Front statique (Astro) | accepted |
+| [0004](adr/0004-backend.md) | Backend FastAPI différé | accepted |
+| [0005](adr/0005-release.md) | Conventional Commits + release-please | accepted |
+| [0006](adr/0006-photos.md) | Banque de photos | accepted |
+| [0007](adr/0007-reseaux-sociaux.md) | Relais Facebook / Instagram | accepted |
 | [0008](adr/0008-billetterie.md) | Billetterie par liens externes (AssoConnect) | accepted |
 | [0009](adr/0009-deploiement.md) | Déploiement auto (en dernier) | proposed |
 

@@ -7,6 +7,8 @@ Hébergé sur Raspberry Pi (Docker Compose), exposé sur Internet à terme.
 
 ## État du projet
 
+Les ADR 0001 à 0008 sont acceptés ; le déploiement automatique (0009) sera traité en dernier.
+
 Phase actuelle : **conception** (aucun code). Voir [`docs/`](docs/README.md).
 
 ## Conventions

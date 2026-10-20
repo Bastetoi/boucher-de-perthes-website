@@ -9,4 +9,4 @@ Chaque représentation porte un `ticketUrl` pointant vers une plateforme externe
 - La page AssoConnect s'ouvre dans un nouvel onglet (`rel="noopener"`) ; pas d'iframe en v1.
 
 ## Question ouverte
-Une billetterie AssoConnect par date ou par spectacle ? (impacte le champ `ticketUrl`)
+~~Par date ou par spectacle ?~~ Tranché : **un lien par date**, ~5 par an, à renouveler chaque saison (cf. specs/02).
