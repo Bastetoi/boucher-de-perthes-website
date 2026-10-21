@@ -1,0 +1,46 @@
+---
+import { getEntry } from 'astro:content';
+import { formatDay, isoDay, type EventEntry } from '../lib/site';
+
+interface Props {
+  event: EventEntry;
+  past?: boolean;
+}
+
+const { event, past = false } = Astro.props;
+const { date, time, venue, ticketUrl, price, status } = event.data;
+const show = await getEntry(event.data.show);
+---
+
+<article class="event" class:list={{ past }}>
+  <time datetime={isoDay(date)} class="event__date">
+    {formatDay(date)}{time && ` · ${time.replace(':', 'h')}`}
+  </time>
+  <h3><a href={`/spectacles/${show.id}`}>{show.data.title}</a></h3>
+  {venue && <p class="event__venue">{venue.name}{venue.city && `, ${venue.city}`}</p>}
+  {price && <p class="event__price">{price}</p>}
+  {
+    !past && (
+      <p>
+        {status === 'open' && (
+          <a class="button" href={ticketUrl} rel="noopener" target="_blank">
+            Réserver<span class="visually-hidden"> pour le {formatDay(date)} (nouvel onglet)</span>
+          </a>
+        )}
+        {status === 'soldout' && <span class="badge">Complet</span>}
+      </p>
+    )
+  }
+</article>
+
+<style>
+  .event { padding: 1.25rem 0; border-top: 1px solid var(--burgundy-800); }
+  .event h3 { margin: 0.25rem 0; font-size: 1.75rem; }
+  .event h3 a { color: var(--text); text-decoration: none; }
+  .event h3 a:hover { color: var(--accent); }
+  .event__date { display: block; color: var(--accent); font-weight: 600; }
+  .event__date::first-letter { text-transform: uppercase; }
+  .event__venue, .event__price { margin: 0; color: var(--muted); }
+  .past { opacity: 0.7; }
+  .badge { display: inline-block; padding: 0.5rem 1rem; border: 1px solid var(--muted); color: var(--muted); }
+</style>

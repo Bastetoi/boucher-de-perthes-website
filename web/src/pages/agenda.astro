@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro';
+import EventCard from '../components/EventCard.astro';
+import { getEvents } from '../lib/site';
+import { theaterEventLd } from '../lib/jsonld';
+
+const { upcoming, past } = await getEvents();
+const ld = await theaterEventLd(upcoming);
+---
+
+<Base title="Agenda" description="Les prochaines représentations et la billetterie.">
+  {ld.map((d) => <script slot="head" type="application/ld+json" set:html={JSON.stringify(d)} />)}
+  <main class="page container" id="contenu">
+    <h1>Agenda</h1>
+    <h2 class="section-title">À venir</h2>
+    {upcoming.length ? upcoming.map((e) => <EventCard event={e} />) : <p class="empty">Pas de date annoncée pour le moment. Suivez-nous sur Instagram et Facebook pour la prochaine création.</p>}
+    {
+      past.length > 0 && (
+        <>
+          <h2 class="section-title">Passées</h2>
+          {past.map((e) => <EventCard event={e} past />)}
+        </>
+      )
+    }
+  </main>
+</Base>

@@ -1,14 +1,24 @@
 ---
 import '../styles/global.css';
+import { SITE } from '../lib/site';
+import SocialLinks from '../components/SocialLinks.astro';
 
 interface Props {
   title?: string;
   description?: string;
+  /** Page d'accueil : le hero porte déjà le titre et le logo. */
+  bare?: boolean;
 }
 
-const SITE_NAME = 'Les boucher de Perthes';
-const { title, description = 'Troupe de théâtre : spectacles, dates et billetterie.' } = Astro.props;
-const fullTitle = title ? `${title} · ${SITE_NAME}` : SITE_NAME;
+const { title, description = 'Troupe de théâtre : spectacles, dates et billetterie.', bare = false } = Astro.props;
+const fullTitle = title ? `${title} · ${SITE.name}` : SITE.name;
+const path = Astro.url.pathname;
+const nav = [
+  { href: '/agenda', label: 'Agenda' },
+  { href: '/spectacles', label: 'Spectacles' },
+  { href: '/actualites', label: 'Actualités' },
+  { href: '/la-troupe', label: 'La troupe' },
+];
 ---
 
 <!doctype html>
@@ -21,10 +31,50 @@ const fullTitle = title ? `${title} · ${SITE_NAME}` : SITE_NAME;
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="website" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="canonical" href={new URL(path, Astro.site)} />
+    <slot name="head" />
   </head>
   <body>
+    <a class="skip" href="#contenu">Aller au contenu</a>
+    <header class="site-header" class:list={{ overlay: bare }}>
+      {
+        bare ? (
+          <a class="brand" href="/" aria-label={`${SITE.name}, accueil`}>
+            <img src="/logo-light.svg" alt="" width="48" height="48" />
+          </a>
+        ) : (
+          <a class="brand" href="/" aria-label={`${SITE.name}, accueil`}>
+            <img src="/logo-light.svg" alt="" width="48" height="48" />
+            <span>{SITE.name}</span>
+          </a>
+        )
+      }
+      <nav aria-label="Navigation principale">
+        <ul>
+          {nav.map((i) => <li><a href={i.href} aria-current={path.startsWith(i.href) ? 'page' : undefined}>{i.label}</a></li>)}
+        </ul>
+      </nav>
+    </header>
     <slot />
+    <footer class="site-footer">
+      <p>© {new Date().getFullYear()} {SITE.name}</p>
+      <SocialLinks />
+      <p><a href="/mentions-legales">Mentions légales</a></p>
+    </footer>
   </body>
 </html>
+
+<style>
+  .skip { position: absolute; left: -999px; }
+  .skip:focus { left: 1rem; top: 1rem; z-index: 10; background: var(--bg); padding: 0.5rem 1rem; }
+  .site-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem 2rem; padding: 0.75rem var(--gutter); }
+  .site-header.overlay { position: absolute; inset: 0 0 auto 0; z-index: 2; background: linear-gradient(180deg, rgb(0 0 0 / 0.7), transparent); }
+  .brand { display: flex; align-items: center; gap: 0.75rem; color: var(--text); text-decoration: none; font-family: var(--font-title); font-size: 1.4rem; font-weight: 600; }
+  nav ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; list-style: none; margin: 0; padding: 0; }
+  nav a { color: var(--text); text-decoration: none; padding: 0.25rem 0; border-bottom: 2px solid transparent; }
+  nav a:hover, nav a[aria-current] { border-bottom-color: var(--accent); }
+  .site-footer { display: grid; gap: 1rem; justify-items: center; text-align: center; padding: 3rem var(--gutter); margin-top: 4rem; background: var(--bg-deep); color: var(--muted); }
+  .site-footer p { margin: 0; }
+</style>

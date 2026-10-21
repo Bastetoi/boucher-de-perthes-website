@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+import { SITE } from '../lib/site';
+---
+
+<Base title="La troupe" description="Qui sommes-nous, et comment nous contacter.">
+  <main class="page container" id="contenu">
+    <h1>La troupe</h1>
+    <p class="lead">Texte de présentation de la troupe à venir.</p>
+    <h2 class="section-title">Nous contacter</h2>
+    <p>Une question, une invitation, une envie de nous rejoindre ? Écrivez-nous à <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
+    <SocialLinks />
+  </main>
+</Base>

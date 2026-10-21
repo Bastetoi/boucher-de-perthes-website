@@ -1,4 +1,4 @@
-import { defineCollection } from 'astro:content';
+import { defineCollection, reference } from 'astro:content';
 import { z } from 'astro/zod';
 import { glob } from 'astro/loaders';
 
@@ -24,10 +24,11 @@ const TICKET_HOST = 'https://les-boucher-de-perthes.assoconnect.com/';
 const events = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/events' }),
   schema: z.object({
-    show: z.string(), // id d'un spectacle
-    date: z.coerce.date(),
-    venue: z.object({ name: z.string(), address: z.string().optional(), city: z.string() }),
-    ticketUrl: z.string().url().startsWith(TICKET_HOST, `ticketUrl doit commencer par ${TICKET_HOST}`),
+    show: reference('shows'),
+    date: z.coerce.date(), // jour de la représentation (YAML : 2026-05-26)
+    time: z.string().regex(/^\d{2}:\d{2}$/, 'format HH:MM').optional(),
+    venue: z.object({ name: z.string(), address: z.string().optional(), city: z.string().optional() }).optional(),
+    ticketUrl: z.url().refine((u) => u.startsWith(TICKET_HOST), `ticketUrl doit commencer par ${TICKET_HOST}`),
     price: z.string().optional(),
     status: z.enum(['open', 'soldout', 'cancelled']).default('open'),
   }),
@@ -40,7 +41,7 @@ const news = defineCollection({
       title: z.string(),
       date: z.coerce.date(),
       source: z.enum(['facebook', 'instagram']),
-      url: z.string().url(),
+      url: z.url(),
       image: image().optional(),
       excerpt: z.string().optional(),
     }),

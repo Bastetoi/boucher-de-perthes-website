@@ -1,17 +1,54 @@
 ---
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
+import EventCard from '../components/EventCard.astro';
+import SocialLinks from '../components/SocialLinks.astro';
 import hero from '../assets/photos/hero.jpg';
+import { SITE, getEvents, getNews } from '../lib/site';
+
+const { upcoming } = await getEvents();
+const news = (await getNews()).slice(0, 3);
+const next = upcoming[0];
 ---
 
-<Base>
-  <main class="hero">
-    <Image src={hero} alt="Silhouette éclairée par un projecteur sur une scène sombre" class="hero__photo" widths={[800, 1200, 2000]} sizes="100vw" loading="eager" />
-    <div class="hero__content">
-      <img src="/logo-light.svg" alt="" width="180" height="180" />
-      <h1>Les boucher de Perthes</h1>
-      <p>Troupe de théâtre</p>
-      <p><a class="button" href="https://les-boucher-de-perthes.assoconnect.com/" rel="noopener">Réserver</a></p>
+<Base bare>
+  <main>
+    <section class="hero">
+      <Image src={hero} alt="Silhouette éclairée par un projecteur sur une scène sombre" class="hero__photo" widths={[800, 1200, 2000]} sizes="100vw" loading="eager" />
+      <div class="hero__content">
+        <img src="/logo-light.svg" alt="" width="180" height="180" />
+        <h1>{SITE.name}</h1>
+        <p>{SITE.tagline}</p>
+        <p>
+          {next
+            ? <a class="button" href={next.data.ticketUrl} rel="noopener" target="_blank">Réserver</a>
+            : <a class="button" href="/agenda">Voir l'agenda</a>}
+        </p>
+      </div>
+    </section>
+
+    <div class="container">
+      <h2 class="section-title">Prochaines représentations</h2>
+      {
+        upcoming.length ? (
+          upcoming.slice(0, 3).map((e) => <EventCard event={e} />)
+        ) : (
+          <p class="empty">Les prochaines dates seront annoncées bientôt. Suivez-nous sur nos réseaux pour ne rien manquer.</p>
+        )
+      }
+      {upcoming.length > 3 && <p><a href="/agenda">Toutes les dates →</a></p>}
+
+      <h2 class="section-title">Actualités</h2>
+      {
+        news.length ? (
+          <ul class="news-list">
+            {news.map((n) => <li><a href={n.data.url} rel="noopener" target="_blank">{n.data.title}</a></li>)}
+          </ul>
+        ) : (
+          <p class="empty">Retrouvez toute notre actualité sur nos réseaux.</p>
+        )
+      }
+      <SocialLinks />
     </div>
   </main>
 </Base>
@@ -20,9 +57,10 @@ import hero from '../assets/photos/hero.jpg';
   .hero { position: relative; min-height: 100svh; display: grid; align-items: center; overflow: hidden; }
   .hero__photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 75% center; }
   .hero__content { position: relative; padding: var(--gutter); max-width: 28rem; }
+  h1 { font-size: clamp(2.25rem, 6vw, 3.5rem); margin: 0.5rem 0; }
+  .news-list { padding-left: 1.2rem; }
   @media (max-width: 700px) {
     .hero { align-items: end; }
     .hero__content { max-width: none; padding-top: 6rem; background: linear-gradient(0deg, var(--bg) 55%, transparent); }
   }
-  h1 { font-size: clamp(2.25rem, 6vw, 3.5rem); margin: 0.5rem 0; }
 </style>

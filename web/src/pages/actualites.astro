@@ -1,0 +1,44 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+import { getNews } from '../lib/site';
+
+const news = await getNews();
+const fmt = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const label = { facebook: 'Facebook', instagram: 'Instagram' };
+---
+
+<Base title="Actualités" description="Les dernières publications de la troupe sur Facebook et Instagram.">
+  <main class="page container" id="contenu">
+    <h1>Actualités</h1>
+    {news.length ? (
+      <ul class="cards">
+        {news.map((n) => (
+          <li>
+            <a href={n.data.url} rel="noopener" target="_blank">
+              {n.data.image && <Image src={n.data.image} alt="" widths={[400, 800]} sizes="(min-width: 700px) 20rem, 100vw" />}
+              <time datetime={n.data.date.toISOString().slice(0, 10)}>{fmt.format(n.data.date)}</time>
+              <h2>{n.data.title}</h2>
+              {n.data.excerpt && <p>{n.data.excerpt}</p>}
+              <small>Voir sur {label[n.data.source]} ↗</small>
+            </a>
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p class="empty">Nos publications arrivent bientôt ici. En attendant, retrouvez-nous sur nos réseaux.</p>
+    )}
+    <h2 class="section-title">Suivez-nous</h2>
+    <SocialLinks />
+  </main>
+</Base>
+
+<style>
+  .cards { list-style: none; padding: 0; display: grid; gap: 2rem; grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); }
+  .cards a { display: block; color: var(--text); text-decoration: none; }
+  .cards img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+  .cards h2 { font-size: 1.5rem; margin: 0.25rem 0; }
+  .cards a:hover h2 { color: var(--accent); }
+  time, small { color: var(--muted); }
+</style>

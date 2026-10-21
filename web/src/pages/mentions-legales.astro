@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../lib/site';
+---
+
+<Base title="Mentions légales">
+  <meta slot="head" name="robots" content="noindex" />
+  <main class="page container" id="contenu">
+    <h1>Mentions légales</h1>
+    <h2>Éditeur</h2>
+    <p>{SITE.name}, troupe de théâtre. Contact : <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
+    <p>Directeur de la publication : à compléter.</p>
+    <h2>Hébergement</h2>
+    <p>Site auto-hébergé. Les pages peuvent être servies via le réseau de diffusion de Cloudflare, Inc.</p>
+    <h2>Billetterie</h2>
+    <p>La réservation est assurée par AssoConnect, sur <a href={SITE.ticketing} rel="noopener">son propre site</a>, qui est seul responsable du traitement des données liées aux réservations.</p>
+    <h2>Données personnelles et cookies</h2>
+    <p>Ce site ne dépose aucun cookie, ne contient aucun traceur et ne collecte aucune donnée personnelle.</p>
+    <h2>Droit à l'image</h2>
+    <p>Les photos publiées ont été prises avec l'accord des personnes représentées.</p>
+  </main>
+</Base>
