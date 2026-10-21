@@ -1,7 +1,7 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 
 export const SITE = {
-  name: 'Les boucher de Perthes',
+  name: 'Les Boucher de Perthes',
   tagline: 'Troupe de théâtre',
   email: 'lesboucherdeperthes@gmail.com',
   instagram: 'https://www.instagram.com/lesboucherdeperthes/',

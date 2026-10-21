@@ -1,6 +1,6 @@
-# Les boucher de Perthes — site web
+# Les Boucher de Perthes — site web
 
-> Nom de la troupe : « Les boucher de Perthes » (sans « s » à *boucher*, volontairement).
+> Nom de la troupe : « Les Boucher de Perthes » : Boucher est un nom de famille, avec une majuscule et sans « s ».
 
 Site vitrine : billetterie (liens externes) + relais des publications Facebook / Instagram.
 Hébergé sur Raspberry Pi (Docker Compose), exposé sur Internet à terme.

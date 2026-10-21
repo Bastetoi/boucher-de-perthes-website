@@ -14,7 +14,7 @@ Backend, comptes utilisateurs, paiement, formulaire avec stockage, espace admin.
 Français, mobile d'abord, rapide, accessible (RGAA/WCAG AA visé), pas de cookies tiers, hébergement sur Raspberry Pi.
 
 ## Nom
-- Troupe : **Les boucher de Perthes** (pas de « s » à *boucher*, à respecter partout : titres, SEO, métadonnées).
+- Troupe : **Les Boucher de Perthes** (*Boucher* est un nom de famille : majuscule, pas de « s ». À respecter partout : titres, SEO, métadonnées).
 - Repo / projet : `boucher-de-perthes-website`.
 - Domaine (à acheter chez Cloudflare, à valider) : `boucherdeperthes.fr` en premier choix, alternatives `lesboucherdeperthes.fr`, `boucherdeperthes.com`. Vérifier la disponibilité avant de trancher.
 - Prévoir plus tard une redirection depuis la variante avec « s » (`bouchersdeperthes.*`) si les gens se trompent.
