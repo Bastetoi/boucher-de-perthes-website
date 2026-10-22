@@ -4,7 +4,7 @@
 - [ ] Mentions légales : adresse du siège de l'association (président : Léonard Gazeau, fait)
 - [ ] Zoo : valider le résumé et la saison, dates et liens AssoConnect (lieu : 40 rue Boucher de Perthes, Lille, fait)
 - [ ] Prochaines dates : jour, heure, lieu, prix, lien AssoConnect de chaque date (un fichier par date dans `web/src/content/events/`)
-- [ ] Texte de présentation de la troupe (`/la-troupe`)
+- [x] Texte de présentation de la troupe (à relire)
 - [ ] Actualités Facebook / Instagram à relayer (`web/src/content/news/`)
 - [ ] Accord des personnes photographiées pour les photos de l'accueil (dont le public)
 

@@ -4,12 +4,37 @@ import SocialLinks from '../components/SocialLinks.astro';
 import { SITE } from '../lib/site';
 ---
 
-<Base title="La troupe" description="Qui sommes-nous, et comment nous contacter.">
+<Base title="La troupe" description="Troupe de théâtre amateur lilloise : nos spectacles, notre action solidaire, comment nous rejoindre.">
   <main class="page container" id="contenu">
     <h1>La troupe</h1>
-    <p class="lead">Texte de présentation de la troupe à venir.</p>
+    <p class="lead">
+      Les Boucher de Perthes sont une troupe de théâtre amateur lilloise. Nous montons une pièce chaque année et, cette saison, nous fêtons notre quatrième année sur scène.
+    </p>
+
+    <h2 class="section-title">Nos spectacles</h2>
+    <ul class="plain">
+      <li><em>Le Bal des voleurs</em></li>
+      <li><em>La Reconstitution</em>, d'Agatha Christie</li>
+      <li><a href="/spectacles/cendrillon"><em>Cendrillon</em></a>, de Joël Pommerat</li>
+      <li><a href="/spectacles/zoo"><em>Zoo ou l'assassin philanthrope</em></a>, de Vercors (cette année)</li>
+    </ul>
+
+    <h2 class="section-title">Un théâtre solidaire</h2>
+    <p>
+      Les bénéfices de nos spectacles sont <strong>entièrement reversés à des associations caritatives locales</strong>, comme les Petites Sœurs des Pauvres de Lille – La Madeleine (EHPAD) ou l'association Magdala (accueil de jour pour personnes sans abri).
+    </p>
+
+    <h2 class="section-title">Nous rejoindre</h2>
+    <p>
+      Nous organisons des castings chaque début de saison, en septembre. Envie de monter sur scène avec nous ? Écrivez-nous.
+    </p>
+
     <h2 class="section-title">Nous contacter</h2>
     <p>Une question, une invitation, une envie de nous rejoindre ? Écrivez-nous à <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
     <SocialLinks />
   </main>
 </Base>
+
+<style>
+  .plain { padding-left: 1.2rem; display: grid; gap: 0.4rem; }
+</style>
