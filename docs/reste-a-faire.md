@@ -1,8 +1,8 @@
 # Reste à faire
 
 ## Contenu (bloquant pour la V1)
-- [ ] Mentions légales : nom du président (directeur de la publication) et adresse du siège de l'association
-- [ ] Cendrillon : lieu et résumé
+- [ ] Mentions légales : adresse du siège de l'association (président : Léonard Gazeau, fait)
+- [ ] Cendrillon : lieu (résumé fait) ; Zoo : valider le résumé, la saison, lieu et dates
 - [ ] Prochaines dates : jour, heure, lieu, prix, lien AssoConnect de chaque date (un fichier par date dans `web/src/content/events/`)
 - [ ] Texte de présentation de la troupe (`/la-troupe`)
 - [ ] Actualités Facebook / Instagram à relayer (`web/src/content/news/`)
