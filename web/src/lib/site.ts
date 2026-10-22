@@ -7,6 +7,7 @@ export const SITE = {
   email: 'lesboucherdeperthes@gmail.com',
   instagram: 'https://www.instagram.com/lesboucherdeperthes/',
   facebook: 'https://www.facebook.com/share/19eVfzg3bK/',
+  photoCredit: { name: '@amhmfd', url: 'https://www.instagram.com/amhmfd/' },
   ticketing: 'https://les-boucher-de-perthes.assoconnect.com/',
 } as const;
 

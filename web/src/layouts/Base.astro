@@ -63,6 +63,7 @@ const nav = [
     <footer class="site-footer">
       <p>© {new Date().getFullYear()} {SITE.name}</p>
       <SocialLinks />
+      <p class="credit">Photos : <a href={SITE.photoCredit.url} rel="noopener" target="_blank">{SITE.photoCredit.name}</a></p>
       <p><a href="/mentions-legales">Mentions légales</a></p>
     </footer>
   </body>
@@ -79,4 +80,6 @@ const nav = [
   nav a:hover, nav a[aria-current] { border-bottom-color: var(--accent); }
   .site-footer { display: grid; gap: 1rem; justify-items: center; text-align: center; padding: 3rem var(--gutter); margin-top: 4rem; background: var(--bg-deep); color: var(--muted); }
   .site-footer p { margin: 0; }
+  .site-footer .credit { font-size: 0.85rem; }
+  .site-footer .credit a { color: inherit; }
 </style>
