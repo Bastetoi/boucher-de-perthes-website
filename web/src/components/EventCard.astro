@@ -17,7 +17,8 @@ const show = await getEntry(event.data.show);
     {formatDay(date)}{time && ` · ${time.replace(':', 'h')}`}
   </time>
   <h3><a href={`/spectacles/${show.id}`}>{show.data.title}</a></h3>
-  {venue && <p class="event__venue">{venue.name}{venue.city && `, ${venue.city}`}</p>}
+  {venue && <p class="event__venue">{venue.name}</p>}
+  {venue?.address && <p class="event__venue">{[venue.address, venue.city].filter(Boolean).join(', ')}</p>}
   {price && <p class="event__price">{price}</p>}
   {
     !past && (
