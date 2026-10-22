@@ -20,7 +20,7 @@ const panels = [
   {
     panels.map((p, i) => (
       <li class="panel" class:list={{ 'is-active': i === 0 }} tabindex="0">
-        <Image src={p.src} alt={p.alt} widths={[400, 800, 1333]} sizes="50vw" style={`object-position: ${p.focus}`} loading={i === 0 ? 'eager' : 'lazy'} />
+        <Image src={p.src} alt={p.alt} widths={[400, 800, 1333]} sizes="50vw" style={`object-position: ${p.focus}`} loading="eager" />
       </li>
     ))
   }

@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
 import { SITE } from '../lib/site';
+import { Image } from 'astro:assets';
+import logo from '../assets/brand/logo-light.svg';
 import SocialLinks from '../components/SocialLinks.astro';
 
 interface Props {
@@ -42,11 +44,11 @@ const nav = [
       {
         bare ? (
           <a class="brand" href="/" aria-label={`${SITE.name}, accueil`}>
-            <img src="/logo-light.svg" alt="" width="48" height="48" />
+            <Image src={logo} alt="" width={48} height={48} loading="eager" />
           </a>
         ) : (
           <a class="brand" href="/" aria-label={`${SITE.name}, accueil`}>
-            <img src="/logo-light.svg" alt="" width="48" height="48" />
+            <Image src={logo} alt="" width={48} height={48} loading="eager" />
             <span>{SITE.name}</span>
           </a>
         )
