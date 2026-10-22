@@ -1,4 +1,5 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
+import { existsSync, readdirSync } from 'node:fs';
 
 export const SITE = {
   name: 'Les Boucher de Perthes',
@@ -28,5 +29,8 @@ export async function getEvents() {
 }
 
 export async function getNews() {
+  // Évite l'avertissement d'Astro tant que la collection est vide.
+  const dir = './src/content/news';
+  if (!existsSync(dir) || !readdirSync(dir).some((f) => f.endsWith('.md'))) return [];
   return (await getCollection('news')).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 }

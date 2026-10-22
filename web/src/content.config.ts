@@ -1,6 +1,10 @@
 import { defineCollection, reference } from 'astro:content';
 import { z } from 'astro/zod';
 import { glob } from 'astro/loaders';
+import { existsSync, readdirSync } from 'node:fs';
+
+// Évite l'avertissement du loader glob tant qu'aucune actualité n'existe.
+const hasMarkdown = (dir: string) => existsSync(dir) && readdirSync(dir).some((f) => f.endsWith('.md'));
 
 // Voir docs/specs/02-contenu.md
 
@@ -35,7 +39,9 @@ const events = defineCollection({
 });
 
 const news = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/news' }),
+  loader: hasMarkdown('./src/content/news')
+    ? glob({ pattern: '**/*.md', base: './src/content/news' })
+    : { name: 'news-empty', load: async () => {} },
   schema: ({ image }) =>
     z.object({
       title: z.string(),

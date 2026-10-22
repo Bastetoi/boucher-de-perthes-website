@@ -25,4 +25,6 @@ npm run dev      # http://localhost:4321
 npm run build    # vérification des types + build statique dans web/dist
 ```
 
+Nouvelles photos : `python3 scripts/optimize-photos.py <dossier-originaux>` (nécessite Pillow) les réduit à 2400 px max, JPEG q85, sans métadonnées, dans `web/src/assets/photos/`.
+
 Workflow : branche → PR (titre en Conventional Commits, squash merge) → release-please ouvre la PR de release.
