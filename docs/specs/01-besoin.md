@@ -16,7 +16,7 @@ Français, mobile d'abord, rapide, accessible (RGAA/WCAG AA visé), pas de cooki
 ## Nom
 - Troupe : **Les Boucher de Perthes** (*Boucher* est un nom de famille : majuscule, pas de « s ». À respecter partout : titres, SEO, métadonnées).
 - Repo / projet : `boucher-de-perthes-website`.
-- Domaine (à acheter chez Cloudflare, à valider) : `boucherdeperthes.fr` en premier choix, alternatives `lesboucherdeperthes.fr`, `boucherdeperthes.com`. Vérifier la disponibilité avant de trancher.
+- Domaine : `lesboucherdeperthes.com`, acheté chez Cloudflare.
 - Prévoir plus tard une redirection depuis la variante avec « s » (`bouchersdeperthes.*`) si les gens se trompent.
 
 ## Reçu / à fournir

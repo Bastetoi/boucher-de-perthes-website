@@ -39,13 +39,16 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      # GHCR n'accepte que des noms en minuscules (le compte est « Bastetoi »)
+      - id: image
+        run: echo "name=ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/boucher-de-perthes-website" >> "$GITHUB_OUTPUT"
       - uses: docker/build-push-action@v6
         with:
           context: web
           platforms: linux/arm64
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/boucher-de-perthes-website:${{ needs.release-please.outputs.version }}
-            ghcr.io/${{ github.repository_owner }}/boucher-de-perthes-website:latest
+            ${{ steps.image.outputs.name }}:${{ needs.release-please.outputs.version }}
+            ${{ steps.image.outputs.name }}:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max

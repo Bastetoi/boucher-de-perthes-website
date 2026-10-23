@@ -10,7 +10,7 @@
 
 ## Décisions à prendre
 - [ ] Ancienne photo d'accueil encore dans l'historique git du repo public : réécrire l'historique ou laisser (voir échange)
-- [ ] Nom de domaine à acheter chez Cloudflare (`boucherdeperthes.fr` en premier choix) puis mise à jour de `site` dans `web/astro.config.mjs`
+- [x] Domaine acheté chez Cloudflare : `lesboucherdeperthes.com` (`site` mis à jour dans `web/astro.config.mjs`)
 - [ ] Logo : original vectoriel perdu, version recréée dans `brand/` (à remplacer si retrouvé)
 
 ## Technique
