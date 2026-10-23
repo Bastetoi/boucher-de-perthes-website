@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/Bastetoi/boucher-de-perthes-website/compare/boucher-de-perthes-website-v1.0.0...boucher-de-perthes-website-v1.1.0) (2026-10-23)
+
+
+### Features
+
+* **deploy:** add systemd timer pull-based auto-deploy for the Pi ([#4](https://github.com/Bastetoi/boucher-de-perthes-website/issues/4)) ([c94c297](https://github.com/Bastetoi/boucher-de-perthes-website/commit/c94c297a112089831766e716196dc826c90836a6))
+
 ## 1.0.0 (2026-10-23)
 
 
