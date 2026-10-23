@@ -1,6 +1,6 @@
-# Les boucher de Perthes — site web
+# Les Boucher de Perthes — site web
 
-> Nom de la troupe : « Les boucher de Perthes » (sans « s » à *boucher*, volontairement).
+> Nom de la troupe : « Les Boucher de Perthes » : Boucher est un nom de famille, avec une majuscule et sans « s ».
 
 Site vitrine : billetterie (liens externes) + relais des publications Facebook / Instagram.
 Hébergé sur Raspberry Pi (Docker Compose), exposé sur Internet à terme.
@@ -24,5 +24,7 @@ npm ci
 npm run dev      # http://localhost:4321
 npm run build    # vérification des types + build statique dans web/dist
 ```
+
+Nouvelles photos : `python3 scripts/optimize-photos.py <dossier-originaux>` (nécessite Pillow) les réduit à 2400 px max, JPEG q85, sans métadonnées, dans `web/src/assets/photos/`.
 
 Workflow : branche → PR (titre en Conventional Commits, squash merge) → release-please ouvre la PR de release.

@@ -12,7 +12,7 @@ Les photos sont l'élément visuel principal. Originaux potentiellement lourds (
 ## Décision proposée
 Option 2, avec un volume de photos < 2 Go à la source (marge haute) et droits à l'image réglés. **Les originaux (jusqu'à 2 Go) restent hors du repo** (disque de la Pi / sauvegarde de la troupe) ; seules les versions réduites (~0,5–1 Mo chacune, soit quelques centaines de Mo au plus) sont versionnées, donc sans Git LFS. Un script `scripts/optimize-photos` (à écrire en phase code) produit les versions réduites depuis un dossier d'originaux.
 
-Photo de référence fournie : `brand/hero-reference.jpg` (2000×1333). Photos dans `web/src/assets/photos/<spectacle-ou-thème>/`, avec fichier de métadonnées (légende, crédit photographe, droit à l'image validé).
+Photo d'accueil : `web/src/assets/photos/hero.jpg` (1333×2000, portrait). Photos dans `web/src/assets/photos/<spectacle-ou-thème>/`, avec fichier de métadonnées (légende, crédit photographe, droit à l'image validé).
 
 ## Questions ouvertes
 - Où la troupe stocke-t-elle les originaux aujourd'hui (Drive, disque) ?

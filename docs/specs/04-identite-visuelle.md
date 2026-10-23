@@ -1,10 +1,10 @@
 # 04 – Identité visuelle
 
-Base : `brand/hero-reference.jpg` (photo) et `brand/logo-150px.jpg` (logo).
+Base : `web/src/assets/photos/hero.jpg` (photo d'accueil) et `brand/logo-150px.jpg` (logo d'origine). La première photo de référence a été retirée à la demande de la personne photographiée.
 
 ## Ce que disent les références
-- **Photo** : fond noir profond, une silhouette éclairée par un projecteur chaud (peau ambrée, paillettes argent), cadrage serré sur le buste, énorme espace vide à gauche. Ambiance cabaret / théâtre, mystérieuse et élégante.
-- **Logo** : tracé « one line » de deux visages entremêlés (le masque du théâtre) en bordeaux sur fond blanc, texte « Les boucher / de Perthes » en capitales fines.
+- **Photo** : fond noir profond, une comédienne de profil assise au bord de la scène, éclairée par un projecteur chaud (peau ambrée, paillettes argent), grand espace noir à gauche et en haut (texte du hero). Ambiance cabaret / théâtre, mystérieuse et élégante.
+- **Logo** : tracé « one line » de deux visages entremêlés (le masque du théâtre) en bordeaux sur fond blanc, texte « Les Boucher / de Perthes » en écriture manuscrite.
 
 ## Direction proposée
 - **Thème sombre** par défaut : fond quasi noir, texte clair.

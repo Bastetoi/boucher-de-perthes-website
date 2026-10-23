@@ -1,3 +1,5 @@
+@import '@fontsource/cormorant-garamond/latin-600.css';
+@import '@fontsource/cormorant-garamond/latin-600-italic.css';
 /* Palette : docs/specs/04-identite-visuelle.md */
 :root {
   --bg: #0b0908;
@@ -47,3 +49,10 @@ a:hover { color: var(--text); }
 }
 
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+.container { width: min(100% - 2 * var(--gutter), 60rem); margin-inline: auto; }
+main.page { padding-block: 2rem 0; }
+main.page h1 { font-size: clamp(2.25rem, 5vw, 3.25rem); margin-top: 0; }
+.lead { font-size: 1.2rem; color: var(--muted); }
+.empty { padding: 1.5rem; border: 1px dashed var(--burgundy); color: var(--muted); }
+.section-title { font-size: 2rem; margin: 3rem 0 0.5rem; }
