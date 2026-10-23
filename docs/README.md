@@ -20,6 +20,6 @@ Le code ne démarre que lorsque les ADR ci-dessous sont passés en `accepted`.
 | [0006](adr/0006-photos.md) | Banque de photos | accepted |
 | [0007](adr/0007-reseaux-sociaux.md) | Relais Facebook / Instagram | accepted |
 | [0008](adr/0008-billetterie.md) | Billetterie par liens externes (AssoConnect) | accepted |
-| [0009](adr/0009-deploiement.md) | Déploiement auto (en dernier) | proposed |
+| [0009](adr/0009-deploiement.md) | Déploiement auto (pull par minuteur systemd) | accepted |
 
 Statuts : `proposed` → `accepted` | `rejected` | `superseded by NNNN`.

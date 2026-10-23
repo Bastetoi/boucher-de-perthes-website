@@ -27,4 +27,8 @@ npm run build    # vérification des types + build statique dans web/dist
 
 Nouvelles photos : `python3 scripts/optimize-photos.py <dossier-originaux>` (nécessite Pillow) les réduit à 2400 px max, JPEG q85, sans métadonnées, dans `web/src/assets/photos/`.
 
+## Déploiement sur la Pi
+
+Une fois : `cp .env.example .env && sudo ./deploy/install-timer.sh`. Ensuite, chaque release est récupérée automatiquement (voir `docs/adr/0009-deploiement.md`).
+
 Workflow : branche → PR (titre en Conventional Commits, squash merge) → release-please ouvre la PR de release.
