@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/Bastetoi/boucher-de-perthes-website/compare/boucher-de-perthes-website-v1.2.0...boucher-de-perthes-website-v1.2.1) (2026-11-07)
+
+
+### Bug Fixes
+
+* **ci:** build the static site natively instead of under QEMU ([#8](https://github.com/Bastetoi/boucher-de-perthes-website/issues/8)) ([72d1130](https://github.com/Bastetoi/boucher-de-perthes-website/commit/72d1130fe43a42ccae3136007a3d2b6181fa23a4))
+
 ## [1.2.0](https://github.com/Bastetoi/boucher-de-perthes-website/compare/boucher-de-perthes-website-v1.1.0...boucher-de-perthes-website-v1.2.0) (2026-11-07)
 
 
