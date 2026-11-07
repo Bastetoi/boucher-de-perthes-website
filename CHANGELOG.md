@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/Bastetoi/boucher-de-perthes-website/compare/boucher-de-perthes-website-v1.1.0...boucher-de-perthes-website-v1.2.0) (2026-11-07)
+
+
+### Features
+
+* **web:** add branded Cloudflare error pages for outages ([#6](https://github.com/Bastetoi/boucher-de-perthes-website/issues/6)) ([d645885](https://github.com/Bastetoi/boucher-de-perthes-website/commit/d6458850b78ddf0cdeb33b480fa7421f4c469dae))
+
 ## [1.1.0](https://github.com/Bastetoi/boucher-de-perthes-website/compare/boucher-de-perthes-website-v1.0.0...boucher-de-perthes-website-v1.1.0) (2026-10-23)
 
 
