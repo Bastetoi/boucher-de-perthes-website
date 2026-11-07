@@ -21,5 +21,6 @@ Le code ne démarre que lorsque les ADR ci-dessous sont passés en `accepted`.
 | [0007](adr/0007-reseaux-sociaux.md) | Relais Facebook / Instagram | accepted |
 | [0008](adr/0008-billetterie.md) | Billetterie par liens externes (AssoConnect) | accepted |
 | [0009](adr/0009-deploiement.md) | Déploiement auto (pull par minuteur systemd) | accepted |
+| [0010](adr/0010-pannes-et-supervision.md) | Pannes, page d'erreur et supervision | proposed |
 
 Statuts : `proposed` → `accepted` | `rejected` | `superseded by NNNN`.
