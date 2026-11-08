@@ -6,7 +6,7 @@ Le site tourne sur une Raspberry Pi 5 et passe par un Cloudflare Tunnel. Si la P
 
 ## État de la zone relevé le 2026-11-07 (plan Free, lecture seule)
 - SSL/TLS `strict`, TLS 1.3 actif, Always Use HTTPS actif, réécriture HTTPS automatique active.
-- Aucune règle de redirection ni Page Rule ; pas d'enregistrement `www` (l'adresse `www` ne répond pas). Pas de boucle http/https/www.
+- Aucune règle de redirection ni Page Rule ; pas d'enregistrement `www` au départ. Pas de boucle http/https/www. Le 2026-11-08, ajout d'un CNAME `www` proxifié vers l'apex et d'une règle de redirection unique (`http.host eq "www.lesboucherdeperthes.com"`, 301 vers l'apex, chemin et paramètres conservés).
 - Un seul enregistrement DNS : CNAME apex proxifié vers le tunnel `boucher-de-perthes` (`http://localhost:8080`).
 - Version TLS minimale : 1.0 au départ, relevée à 1.2 le 2026-11-08.
 - Always Online : actif.
