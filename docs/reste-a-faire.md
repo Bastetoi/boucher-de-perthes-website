@@ -19,8 +19,9 @@
 - [ ] Exposition via Cloudflare Tunnel (`cloudflared`)
 - [x] Alerte de santé du tunnel Cloudflare (email), cf. ADR 0010
 - [x] Pages `/maintenance-5xx.html` et `/maintenance-1xxx.html` en ligne ; enregistrement dans Cloudflare refusé par le plan Free, pages par défaut conservées, cf. ADR 0010
-- [ ] UptimeRobot sur `https://lesboucherdeperthes.com/?check=uptime` + test `docker compose stop web` / `up -d`
-- [ ] Relever la version TLS minimale à 1.2 ; décider si `www` doit rediriger vers l'apex
+- [x] UptimeRobot sur `https://lesboucherdeperthes.com/?check=uptime`, test `docker compose stop web` / `up -d` concluant (2026-11-08)
+- [x] Version TLS minimale relevée à 1.2 (2026-11-08)
+- [ ] Décider si `www` doit rediriger vers l'apex
 - [x] Alertes SQL 502/530 et latence de l'origine créées (email), cf. ADR 0010
 - [ ] Protection de `main` : PR obligatoire, checks `ci / web`, `pr-lint / title`, `pr-lint / commits`, squash uniquement
 - [ ] Déploiement automatique à la release (image GHCR arm64 + mise à jour côté Pi), cf. ADR 0009, en dernier

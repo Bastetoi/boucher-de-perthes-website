@@ -8,7 +8,7 @@ Le site tourne sur une Raspberry Pi 5 et passe par un Cloudflare Tunnel. Si la P
 - SSL/TLS `strict`, TLS 1.3 actif, Always Use HTTPS actif, réécriture HTTPS automatique active.
 - Aucune règle de redirection ni Page Rule ; pas d'enregistrement `www` (l'adresse `www` ne répond pas). Pas de boucle http/https/www.
 - Un seul enregistrement DNS : CNAME apex proxifié vers le tunnel `boucher-de-perthes` (`http://localhost:8080`).
-- Version TLS minimale : 1.0 (à relever à 1.2).
+- Version TLS minimale : 1.0 au départ, relevée à 1.2 le 2026-11-08.
 - Always Online : actif.
 - Notifications existantes : deux alertes SQL sur les réponses 5xx (SLO < 99,8 % sur 5 min ; seuil > 0 sur 1 min).
 
